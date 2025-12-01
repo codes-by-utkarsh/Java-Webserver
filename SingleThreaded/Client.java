@@ -4,12 +4,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
 
 public class Client
 {
-    public void run() throws IOException, UnknownHostException
+    public void run() throws IOException
     {
         int port = 8010;
         InetAddress address = InetAddress.getByName("localhost");
