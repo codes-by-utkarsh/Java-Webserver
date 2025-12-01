@@ -22,16 +22,19 @@ public class Server {
     
     public static void main(String[] args) {
         int port = 8010;
+        Server server = new Server();
+        server.getConsumer();
         try
         {
             ServerSocket serverSocket = new ServerSocket(port);
-            serverSocket.getSoTimeout(10000);
+            serverSocket.setSoTimeout(10000);
             System.out.println("Server is running on port " + port);
             while (true) {
                 Socket acceptedSocket = serverSocket.accept();
                 System.out.println("Client connected to the server");
-                Thread thread = new Thread();
+                Thread thread = new Thread(()-> server.getConsumer().accept(acceptedSocket));
                 thread.start();
+
             }
         } catch (IOException e) {
             System.out.println("Error starting server");
