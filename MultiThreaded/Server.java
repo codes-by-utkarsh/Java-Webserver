@@ -26,12 +26,13 @@ public class Server {
         server.getConsumer();
         try
         {
+            int i=0;
             ServerSocket serverSocket = new ServerSocket(port);
             serverSocket.setSoTimeout(10000);
             System.out.println("Server is running on port " + port);
             while (true) {
                 Socket acceptedSocket = serverSocket.accept();
-                System.out.println("Client connected to the server");
+                System.out.println("Client connected to the server "+(i+=1));
                 Thread thread = new Thread(()-> server.getConsumer().accept(acceptedSocket));
                 thread.start();
 
