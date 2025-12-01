@@ -72,18 +72,25 @@ Client D waits
 
 #### Single Threaded
 
-    javac SingleThreadServer.java
-    java SingleThreadServer
+    cd Java-Webserver/SingleThreaded
+    javac Server.java
+    java Server.java
+    javac Client.java
+    java Client.java
 
 #### Multi Threaded
 
-    javac MultiThreadServer.java
-    java MultiThreadServer
+    cd Java-Webserver/MultiThreaded
+    javac Server.java
+    java Server.java
+    javac Client.java
+    java Client.java
 
 #### ThreadPool Server
 
-    javac ThreadPoolServer.java
-    java ThreadPoolServer
+    cd Java-Webserver/ThreadPool
+    javac Server.java
+    java Server.java
 
 ------------------------------------------------------------------------
 
