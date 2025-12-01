@@ -21,5 +21,16 @@ public class Client
         System.out.println("Response from the socket is "+line);
     }
 
-    public st
+    public static void main(String[] args)
+    {
+        try
+        {
+            Client client = new Client();
+            client.run();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
